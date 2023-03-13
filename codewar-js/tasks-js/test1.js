@@ -113,27 +113,27 @@ function getParticipants(handshakes){
 
 
 
-console.log((duplicateEncode("din"),"((("));
-    console.log((duplicateEncode("recede"),"()()()"));
-    console.log((duplicateEncode("Success"),")())())","should ignore case"));
-    console.log((duplicateEncode("(( @"),"))(("));
+// console.log((duplicateEncode("din"),"((("));
+//     console.log((duplicateEncode("recede"),"()()()"));
+//     console.log((duplicateEncode("Success"),")())())","should ignore case"));
+//     console.log((duplicateEncode("(( @"),"))(("));
 
 
 
 //**          7            */
 
 
-console.log((nthFibo(1), 0,"1-st Fibo"));
-    console.log((nthFibo(2), 1,"2-nd Fibo"));
-    console.log((nthFibo(3), 1,"3-rd Fibo"));
-    console.log((nthFibo(4), 2,"4-th Fibo"));
+// console.log((nthFibo(1), 0,"1-st Fibo"));
+//     console.log((nthFibo(2), 1,"2-nd Fibo"));
+//     console.log((nthFibo(3), 1,"3-rd Fibo"));
+//     console.log((nthFibo(4), 2,"4-th Fibo"));
 
 
 //**          8            */
 
 
-console.log((formatDuration(1), "1 second"));
-console.log((formatDuration(62), "1 minute and 2 seconds"));
-console.log((formatDuration(120), "2 minutes"));
-console.log((formatDuration(3600), "1 hour"));
-console.log((formatDuration(3662), "1 hour, 1 minute and 2 seconds"));
+// console.log((formatDuration(1), "1 second"));
+// console.log((formatDuration(62), "1 minute and 2 seconds"));
+// console.log((formatDuration(120), "2 minutes"));
+// console.log((formatDuration(3600), "1 hour"));
+// console.log((formatDuration(3662), "1 hour, 1 minute and 2 seconds"));
