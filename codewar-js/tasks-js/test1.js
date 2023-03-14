@@ -1,4 +1,6 @@
-// 1****         Numbers and strings
+//**  DONE!
+
+//**  1****         Numbers and strings   *//
 //1   7 kyu https://www.codewars.com/kata/which-color-is-the-brightest
 //2   7 kyu https://www.codewars.com/kata/disemvowel-trolls
 //3   7 kyu https://www.codewars.com/kata/isograms
@@ -110,8 +112,21 @@ function getParticipants(handshakes){
 
 
 //**          6            */
+// "din"      =>  "((("
+// "recede"   =>  "()()()"
+// "Success"  =>  ")())())"
+// "(( @"     =>  "))((" 
 
 
+function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map( function (v, i, arr) {
+      return arr.indexOf(v) == arr.lastIndexOf(v) ? '(' : ')'
+    })
+    .join('');
+}
 
 // console.log((duplicateEncode("din"),"((("));
 //     console.log((duplicateEncode("recede"),"()()()"));
@@ -122,7 +137,20 @@ function getParticipants(handshakes){
 
 //**          7            */
 
+function nthFibo(n) {
+  let fib = [0, 1];
+  for (let i = 0; i < n; i++) {
+    fib.push(fib[i] + fib[i + 1]);
+  }
+  return fib[n - 1];
+}
 
+
+function nthFibo(n) {
+  let [prev, curr] = [0, 1];
+  for (let i = 1; i < n; i++) [prev, curr] = [curr, prev + curr];
+  return prev;
+}
 // console.log((nthFibo(1), 0,"1-st Fibo"));
 //     console.log((nthFibo(2), 1,"2-nd Fibo"));
 //     console.log((nthFibo(3), 1,"3-rd Fibo"));
@@ -130,8 +158,39 @@ function getParticipants(handshakes){
 
 
 //**          8            */
+const formatDuration = s => s == 0 ? 'now' :
+     [Math.floor(s/60/60/24/365),
+      Math.floor(s/60/60/24)%365,
+      Math.floor(s/60/60)%24,  
+      Math.floor(s/60)%60 ,
+      s%60]
+     .map((e,i)=> e + ' ' + ['year', 'day', 'hour', 'minute', 'second'][i] + (+e>1?'s': ''))
+     .filter(e=> !/^0/.test(e))
+     .join(', ')
+     .replace(/,\s(?=[\d\s\w]*$)/, ' and ');
 
 
+
+     const delegates = [
+      { s: 'year', v: 60 * 60 * 24 * 365 },
+      { s: 'day', v: 60 * 60 * 24 },
+      { s: 'hour', v: 60 * 60 },
+      { s: 'minute', v: 60 },
+      { s: 'second', v: 1 }
+    ];
+    
+    function formatDuration (seconds) {
+      if (!seconds) return 'now';
+      
+      return delegates.reduce((ret, dg, idx) => {
+        const val = Math.floor(seconds / dg.v);
+        if (!val) return ret;
+        seconds -= dg.v * val;
+        const str = val > 1 ? dg.s + 's' : dg.s;
+        const add = !ret ? '' : (seconds > 0 ? ', ' : ' and ');
+        return ret + add + `${val} ${str}`;
+      }, '');
+    }
 // console.log((formatDuration(1), "1 second"));
 // console.log((formatDuration(62), "1 minute and 2 seconds"));
 // console.log((formatDuration(120), "2 minutes"));
