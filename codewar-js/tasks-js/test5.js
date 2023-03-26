@@ -73,7 +73,6 @@ function find(object, path) {
 
 // const showRS = (year, quarter) => {return year, quarter} RSSchool Q3
 
-
 // const max = (a, b) => (a == b ? a : b) 9
 
 // const max = (a, b) => (a > b ? a : b) 9
@@ -83,29 +82,21 @@ function find(object, path) {
 // const max = (a, b) => (a + b < a - b ? a : b) 9
 // console.log(max(7,9))
 
-
-
-
 // console.log(typeof('1' + 2))
 // console.log('1' + 2)
 
+// let a = "true";
+// let b = "true";
 
-
-
-
-
-let a = 'true'; let b = 'true'
-
-console.log(a || b)
-console.log(!a || b)
-console.log(a || !b)
-console.log(!a || !b)
-console.log(!(a || b))
-console.log(!(!a || !b))
+// console.log(a || b);
+// console.log(!a || b);
+// console.log(a || !b);
+// console.log(!a || !b);
+// console.log(!(a || b));
+// console.log(!(!a || !b));
 // console.log('13' > 12)
 // console.log('13px' > 12)
 // console.log('13px' < '14')
-
 
 // let first = 1; let second = 2;
 // console.log(first, second)
@@ -126,7 +117,85 @@ console.log(!(!a || !b))
 // console.log(typeof("null"))
 // console.log('\nHey!'[1])
 
+// let a;
+// console.log(a);
 
 
 
-// let a; console.log(a)
+// console.log(typeof function(){})
+// console.log(typeof('6' * '3'))
+// console.log(true+'hello')
+
+
+
+
+// function foo(a, b){
+//   return a*b;
+// }
+// const bar = foo.bind(null, 2)
+// console.log(bar(2))
+// bar(2);
+
+// console.log(typeof foo().bar)
+
+// let f = function g() {return 23;};
+// console.log(typeof g())
+
+// for(var i=0; i<3; i++ ){
+//   setTimeout(function(){
+//     console.log(i)
+//   }, 1000)
+// }
+// const a=5; const b=7;
+
+// function foo(){
+//   console.log((Function.getArgument (this)))
+// }
+
+function getThis(){
+  return this;
+}
+ console.log(getThis())
+
+// let name = "John";
+// function printName(){
+// //   console.log(name)
+//   // let name = "Peter";
+// console.log(name)
+// }
+// setTimeout(()=>{
+
+//   let name = "Peter";
+//   printName()
+// }, 1000)
+// printName()
+// var user = {
+// name: "Peter",
+// printMessage(){
+// console.log(`Hello, ${this.name}!`);
+// }
+// }
+// var printMessage = user.printMessage;
+// printMessage();
+// "use strict";
+
+
+// const details = {
+//   name:'John!',
+
+// }
+
+// function getMessage(message){
+//   return `${message} ${this.name}`;
+// }
+
+// console.log(getMessage.apply(details, ['Hello']));
+
+// const foo = bar();
+// const number = 2;
+// function bar(){
+//   return number;
+// }
+
+// console.log(message);
+// var message = "Hello";
