@@ -120,14 +120,9 @@ function find(object, path) {
 // let a;
 // console.log(a);
 
-
-
 // console.log(typeof function(){})
 // console.log(typeof('6' * '3'))
 // console.log(true+'hello')
-
-
-
 
 // function foo(a, b){
 //   return a*b;
@@ -152,10 +147,10 @@ function find(object, path) {
 //   console.log((Function.getArgument (this)))
 // }
 
-function getThis(){
+function getThis() {
   return this;
 }
- console.log(getThis())
+console.log(getThis());
 
 // let name = "John";
 // function printName(){
@@ -179,7 +174,6 @@ function getThis(){
 // printMessage();
 // "use strict";
 
-
 // const details = {
 //   name:'John!',
 
@@ -199,3 +193,20 @@ function getThis(){
 
 // console.log(message);
 // var message = "Hello";
+
+// function splitAndMerge(str, sp) {
+//   console.log(
+//     str
+//       .split(" ")
+//       .map((word) => word.split("").join(sp))
+//       .join(" ")
+//   );
+// }
+
+// console.log(splitAndMerge("My name is John", "."));
+
+function whoIsPaying(name) {
+  if (name.length <= 2) return [name];
+  return [name, name.slice(0, 2)];
+}
+console.log(whoIsPaying("Helloo"));
